@@ -21,5 +21,5 @@ fun ShimmerCard(
             .padding(6.dp)
             .clip(MaterialTheme.shapes.large)
             .shimmerEffect(),
-    ) {}
+    )
 }

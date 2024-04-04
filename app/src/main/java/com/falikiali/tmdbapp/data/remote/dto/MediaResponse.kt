@@ -35,6 +35,7 @@ data class ItemMediaResponse(
             title = title,
             name = name,
             posterPath = posterPath,
+            backdropPath = backdropPath,
             releaseDate = releaseDate,
             firstAirDate = firstAirDate,
             id = id ?: -1,

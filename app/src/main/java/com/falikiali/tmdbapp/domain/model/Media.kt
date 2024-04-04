@@ -6,6 +6,7 @@ data class Media(
     val title: String? = null,
     val name: String? = null,
     val posterPath: String? = null,
+    val backdropPath: String? = null,
     val releaseDate: String? = null,
     val firstAirDate: String? = null,
     val id: Int,
