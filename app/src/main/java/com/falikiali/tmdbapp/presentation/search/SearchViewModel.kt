@@ -1,6 +1,5 @@
 package com.falikiali.tmdbapp.presentation.search
 
-import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.falikiali.tmdbapp.domain.usecase.MediaUseCase

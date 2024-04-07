@@ -1,7 +1,6 @@
 package com.falikiali.tmdbapp.data
 
 import androidx.datastore.core.DataStore
-import androidx.datastore.dataStore
 import androidx.datastore.preferences.core.Preferences
 import androidx.datastore.preferences.core.edit
 import com.falikiali.tmdbapp.domain.repository.PreferencesRepository

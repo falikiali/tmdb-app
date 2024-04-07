@@ -2,7 +2,6 @@ package com.falikiali.tmdbapp
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
-import androidx.activity.SystemBarStyle
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.animation.AnimatedContentTransitionScope
@@ -13,8 +12,6 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
-import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.navigation.NavType
@@ -22,18 +19,16 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
-import androidx.paging.compose.collectAsLazyPagingItems
 import com.falikiali.tmdbapp.helper.Screens
 import com.falikiali.tmdbapp.presentation.detail.DetailScreen
 import com.falikiali.tmdbapp.presentation.detail.DetailViewModel
 import com.falikiali.tmdbapp.presentation.list_media.ListMediaScreen
 import com.falikiali.tmdbapp.presentation.list_media.ListMediaViewModel
-import com.falikiali.tmdbapp.presentation.search.SearchViewModel
-import com.falikiali.tmdbapp.screens.MainScreen
 import com.falikiali.tmdbapp.presentation.settings.SettingsScreen
 import com.falikiali.tmdbapp.presentation.settings.SettingsViewModel
 import com.falikiali.tmdbapp.presentation.similar_media.SimilarMediaScreen
 import com.falikiali.tmdbapp.presentation.similar_media.SimilarMediaViewModel
+import com.falikiali.tmdbapp.screens.MainScreen
 import com.falikiali.tmdbapp.ui.theme.TMDBAppTheme
 import dagger.hilt.android.AndroidEntryPoint
 

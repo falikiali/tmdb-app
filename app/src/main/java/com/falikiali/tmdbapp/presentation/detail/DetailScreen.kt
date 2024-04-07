@@ -1,7 +1,6 @@
 package com.falikiali.tmdbapp.presentation.detail
 
 import android.content.Context
-import android.widget.Toast
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable

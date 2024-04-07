@@ -20,7 +20,6 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.tooling.preview.Preview
-import androidx.compose.ui.unit.dp
 import com.falikiali.tmdbapp.ui.theme.TMDBAppTheme
 
 @OptIn(ExperimentalMaterial3Api::class)

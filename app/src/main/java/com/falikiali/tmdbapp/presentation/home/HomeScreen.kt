@@ -3,6 +3,7 @@ package com.falikiali.tmdbapp.presentation.home
 import android.content.Context
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -20,6 +21,7 @@ import androidx.compose.foundation.pager.HorizontalPager
 import androidx.compose.foundation.pager.PageSize
 import androidx.compose.foundation.pager.rememberPagerState
 import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.BrokenImage
@@ -33,6 +35,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.draw.scale
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.asImageBitmap
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
@@ -213,6 +216,37 @@ fun TrendingMediaListInHome(
             ) {
                 mediaList[it].backdropPath?.let { backdropPath -> TrendingMediaBackdrop(ctx = ctx, imgUrl = backdropPath) }
             }
+        }
+    }
+    
+    Spacer(modifier = Modifier.height(12.dp))
+
+    LazyRow(
+        modifier = Modifier
+            .fillMaxWidth(),
+        horizontalArrangement = Arrangement.Center,
+        verticalAlignment = Alignment.CenterVertically
+    ) {
+        items(mediaList.size) {
+            if (it == pagerState.currentPage) {
+                Box(
+                    modifier = Modifier
+                        .padding(horizontal = 3.dp)
+                        .size(9.dp)
+                        .clip(CircleShape)
+                        .background(color = MaterialTheme.colorScheme.primary)
+                )
+            } else {
+                Box(
+                    modifier = Modifier
+                        .padding(horizontal = 3.dp)
+                        .size(6.dp)
+                        .clip(CircleShape)
+                        .background(color = Color.Gray)
+                )
+            }
+
+            Spacer(modifier = Modifier.padding(horizontal = 2.dp))
         }
     }
 
